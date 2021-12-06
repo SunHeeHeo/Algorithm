@@ -1,1 +1,1 @@
-# :seedlling: Algorithm
+# :seedling: Algorithm
