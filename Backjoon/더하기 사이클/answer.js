@@ -15,9 +15,7 @@ console.log("answer",answer)
 console.log("originanswer",originAnswer)
 while (true) {
     var i = 1
-    console.log("들어가니",answer,originAnswer) //11,1
     if(answer==originAnswer) {
-        console.log(answer,originAnswer)
         break
     } else { 
         let newAnswer = String(answer)  //11
@@ -25,12 +23,10 @@ while (true) {
         console.log("2",answer,newAdd) //11,2
         answer = (String(newAnswer.substring(newAnswer.length-1)) +String(newAdd.substring(newAdd.length-1))) 
         console.log("3", answer)
-        break
         i++
         b= Number(newAdd[1]) //8
         console.log(b)
         answer = String(b)+ answer.substring(answer.length-1)
-        console.log(answer)
         i++
         console.log("i",i)
         }
