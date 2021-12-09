@@ -92,7 +92,6 @@ for(let i=2; i<=limit; i++){
   }
 }
 
-
 // input에서 값 받아와서 primecnt 구하기
 function getPrimeCnt(num){
 let cnt = 0

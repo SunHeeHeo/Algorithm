@@ -31,8 +31,5 @@ A-B = C
 
 4
 
-[출처]{
-    https://www.acmicpc.net/problem/1110
-}
+[출처](https://www.acmicpc.net/problem/2869)
 
-https://www.acmicpc.net/problem/2869

@@ -14,32 +14,32 @@ step3 . 찍히면 종료를 의미 하므로 break*
 
 // 이 문제에서 핵심은? if 절을 얼마나 잘 쓰냐 인거 같은데 맞나?
 //*
-// let input = "A rope may form )( a trail in a maze."
-// let count = 0;
-// let searchChar = ["[","]","(",")"] //배열상태로 만들어도 좋을 것 같음
-// let result =[]
-// function getIndexOfNum(input,searchChar) {
-//     let count = 0;
-//     let pos = input.indexOf(searchChar);
-//     while (pos !== -1) {
-//         pos =  input.indexOf(searchChar, pos +1);
-//         count ++;
+let input = "A rope may form )( a trail in a maze."
+let count = 0;
+let searchChar = ["[","]","(",")"] //배열상태로 만들어도 좋을 것 같음
+let result =[]
+function getIndexOfNum(input,searchChar) {
+    let count = 0;
+    let pos = input.indexOf(searchChar);
+    while (pos !== -1) {
+        pos =  input.indexOf(searchChar, pos +1);
+        count ++;
 
-//     }
-//     result.push(count)
-// }
-// for (i=0; i<searchChar.length; i++) {
-//     getIndexOfNum(input,searchChar[i])
-// }
-// for (i=0; i<result.length; i+=2){
-//     if(result[i] !== result[i+1]) {
-//         console.log("no")
-//         break
-//     } else {
-//         console.log("yes")
-//         break
-//     }
-// }
+    }
+    result.push(count)
+}
+for (i=0; i<searchChar.length; i++) {
+    getIndexOfNum(input,searchChar[i])
+}
+for (i=0; i<result.length; i+=2){
+    if(result[i] !== result[i+1]) {
+        console.log("no")
+        break
+    } else {
+        console.log("yes")
+        break
+    }
+}
 //*
 /*고민 했던 시간 : 1시간 
 구현 하면서 어려웠던 것 : 특정 문자 갯수 찾기
@@ -77,4 +77,44 @@ arr.slice(0, arr.length-1).forEach(v => { //입력값 하나씩 출력
 console.log(yesno.join("\n"));
 
 
+//두번째 답안 
+function solution (s) {
+    s= s.replace(/[^\(\)\[\]]/g, "");  //괄호있는거만 남기기(정규식 사용)
+  
+    s=s.split(""); //괄호들 배열로 쪼개기
+    console.log(s) 
+    if(s.length==0)
+    return console.log("Yes1") //괄호가 없으면 YES
+    stack = [] ; //괄호들을 따로 넣어서 찾기
+    
+    for(let i =0 ;i<s.length;i++)
+     {
+        if(s[i]=="(" || s[i]== "[") {  //왼쪽 괄호일때
+          
+            stack.push(s[i])  //선입 선출 먼저 들어온 놈을 먼저 뺴야되는 구조
+        }
+        else  {  //괄호들만 있어서 ")", "]" 이것밖에 없음 오른쪽 괄호일 때
+            if(stack[stack.length-1]=="["&&s[i]=="]") //스택의 마지막 인덱스
+            stack.pop()
+            else if(stack[stack.length-1]=="("&&s[i]==")")
+            stack.pop()
+            else
+            return console.log("No2")
+        }
+     }
+     
+     
+     if(stack.length==0) //스택이 비어있으면
+     {
+         return console.log("Yes3")
+     }
+     else //비어있지 않으면
+     {
+         return console.log("No4")
+     }
+    
+  }
 
+//수창님이 짜신 코드인데, 더 이해가 잘되었다!
+
+//답안 출처 : https://github.com/eternalclash/Algorithm-JS/blob/main/%EC%8A%A4%ED%84%B0%EB%94%94/%EA%B7%A0%ED%98%95%EC%9E%A1%ED%9E%8C%20%EC%84%B8%EC%83%81.js
