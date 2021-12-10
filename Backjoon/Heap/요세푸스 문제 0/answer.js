@@ -45,15 +45,68 @@ for(let i=0; i<round+1; i++) {
 } 
 console.log("answer",answer)
 
-// for (let j=1;j<round+1; j++ ){
-//     arr.splice((j*3)-1,1,"*")
-// }
-// for (let j=0;j<K; j++ ) {
-//     if(arr[j] === "*" ) {
-//         arr.splice(j,1)
-//     } 
-// } console.log(arr)
-// a= arr.splice(0,arr.length-reminder)
-// for (let i =0; i<a.length; i++){
-//     arr.push(a[i])
-// } console.log(arr)
+//이 문제는 구현하다가 생각했던 것처럼 구현이 잘 안됬다! 그래서, 답안을 봤음
+// 참고 답안
+
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().split("\n");
+
+// 알고리즘 - 큐
+
+const num = +input[0].split(' ')[0]
+const idx = +input[0].split(' ')[1]
+
+const arr = Array.from({length : num}, (v, i) => i+1); //[1,2,3...num]
+
+/* Array.는 array 생성자라고 한다
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Array
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+Array.from({length: 5}, (v, i) => i);
+// [0, 1, 2, 3, 4]
+*/
+const answer = [];
+
+while (arr.length > 0){
+    // 첫번째, 두번째 숫자 뒤로 보내기
+    for(let i = 0; i< idx-1; i++){
+        const cutNum = arr.shift(); //arr의 첫번째 요소를 삭제 후 cutNum에 값 선언
+        arr.push(cutNum); //삭제된 값은 arr의 마지막에 추가 
+    }
+    // 맨 앞에 있는 숫자 빼서 새로운 배열에 push
+    const ansNum = arr.shift(); //arr 배열 inx-1 번째가 배열의 제일 앞쪽에 오게 된다면, 삭제후, cutNum 값에 선언
+    answer.push(ansNum); //answer이라는 배열에 다시 push
+}
+
+console.log(`<${answer.join(', ')}>`) //백준의 출력 값과 동일하게 적용
+
+
+
+// 제대로 출력되지만 틀렸습니다 뜸
+
+const num = +input[0].split(' ')[0]
+const idx = +input[0].split(' ')[1]
+
+let arr = [];
+let answer = [];
+
+for(let i=1; i<=num;i++){
+    arr.push(i);
+}
+
+while(arr.length !==0){
+    if(arr.length <=2){
+        cutNum = arr.shift();
+        answer.push(cutNum);
+    }else{
+        let cutArr = arr.splice(0,2); // 앞에 짤린 배열
+        cutNum = arr.shift(); // 삭제된 숫자
+        answer.push(cutNum); // 결과물 배열
+        arr.splice(arr.length, 0, cutArr[0], cutArr[1]) // 새로운 배열 만들기
+    }
+}
+
+console.log('<'+answer.join(', ')+'>');
+
+//참고 했던 답안은 효진님 답안 :)
+//출처 : https://github.com/hyojin-k/Algorithm/blob/main/Baekjoon/b11866/app.js
