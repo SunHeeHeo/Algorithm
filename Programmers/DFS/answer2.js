@@ -41,7 +41,7 @@ function solution(numbers, target) {
              }
             return;
         }
-        //재귀 함수 이해 하는게 쉽지 않음
+        //재귀 함수 숙지 필요
         dfs(index + 1, sum + numbers[index]);
         dfs(index + 1, sum - numbers[index]);  //dis(2,)
     }
