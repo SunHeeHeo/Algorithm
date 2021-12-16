@@ -41,12 +41,14 @@ function solution(numbers, target) {
              }
             return;
         }
-        //재귀 함수 숙지 필요
+        //재귀 함수
         dfs(index + 1, sum + numbers[index]);
-        dfs(index + 1, sum - numbers[index]);  //dis(2,)
+        dfs(index + 1, sum - numbers[index]);  
     }
     
     return answer;
 }
 
 console.log(solution(numbers, target))
+
+//출처 https://jjnooys.medium.com/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%ED%83%80%EA%B2%9F-%EB%84%98%EB%B2%84-javascript-1d7983d423b5
