@@ -13,57 +13,57 @@
 스텝을 더 간추릴 수 없을까?
 */
 
-let N = 5;
-let stages = [2, 1, 2, 6, 2, 4, 3, 3];
-let people = stages.length
+// let N = 5;
+// let stages = [2, 1, 2, 6, 2, 4, 3, 3];
+// let people = stages.length
 
-function solution(N, stages){
-    //정렬식,filter,for each 숙지하기 
-    stages.sort(function(a, b) {
-        return a - b;
-    });
-    let countObj ={};
-    //배열 중복 값 개수 구하기 12345
-    stages.forEach ((x) => {
-        countObj[x] = (countObj[x]||0) +1;
-    })
-    //객체 key 갯수 구하기
-    // console.log(countObj)
-    let i =1
-    for (let key in countObj) {
-        if (Number(key) === i) {
-            // console.log(countObj[key], people)
-            let rate = countObj[key]/people
-            people = people - countObj[key] //앞에서 삭제 해주는 이유는 value 값이 변형 되기 때문
-            countObj[key] = rate
-        } else if( key>i) {
-            delete countObj.key;
-            countObj['5']=0
-        }
-        i++
-    }
+// function solution(N, stages){
+//     //정렬식,filter,for each 숙지하기 
+//     stages.sort(function(a, b) {
+//         return a - b;
+//     });
+//     let countObj ={};
+//     //배열 중복 값 개수 구하기 12345
+//     stages.forEach ((x) => {
+//         countObj[x] = (countObj[x]||0) +1;
+//     })
+//     //객체 key 갯수 구하기
+//     // console.log(countObj)
+//     let i =1
+//     for (let key in countObj) {
+//         if (Number(key) === i) {
+//             // console.log(countObj[key], people)
+//             let rate = countObj[key]/people
+//             people = people - countObj[key] //앞에서 삭제 해주는 이유는 value 값이 변형 되기 때문
+//             countObj[key] = rate
+//         } else if( key>i) {
+//             delete countObj.key;
+//             countObj['5']=0
+//         }
+//         i++
+//     }
     
-    let sortable = [];
-    for (var key in countObj) {
-        if(Number(key)>5) {
-            delete countObj.key
-            break // 눈물 겨운 break.. 왜 delete이 안되는거야 ㅠㅠ delelte을 해도 마지막 값이 들어가짐.
-        }
-        sortable.push([key, countObj[key]]);
-    }
-    sortable.sort(function(a, b) {
-        return b[1]-a[1];
-    });
-    // console.log(sortable)
-    let result=[];
-    for (i =0; i<sortable.length; i++){
-        result.push(Number(sortable[i][0]))
-    }
-    console.log(result)
-return result
-}
+//     let sortable = [];
+//     for (var key in countObj) {
+//         if(Number(key)>5) {
+//             delete countObj.key
+//             break // 눈물 겨운 break.. 왜 delete이 안되는거야 ㅠㅠ delelte을 해도 마지막 값이 들어가짐.
+//         }
+//         sortable.push([key, countObj[key]]);
+//     }
+//     sortable.sort(function(a, b) {
+//         return b[1]-a[1];
+//     });
+//     // console.log(sortable)
+//     let result=[];
+//     for (i =0; i<sortable.length; i++){
+//         result.push(Number(sortable[i][0]))
+//     }
+//     console.log(result)
+// return result
+// }
 
-console.log(solution(N, stages))
+// console.log(solution(N, stages))
 
 //첫번째는 통과했는데, 두번째는 통과 못함..
 //참고 했던 답
