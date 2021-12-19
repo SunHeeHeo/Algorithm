@@ -1,5 +1,5 @@
 # :seedling: Algorithm
-알고리즘 문제를 매일 한 문제 이상 풀고 있습니다. :smile:  
+알고리즘 문제를 매일 한 문제 이상 풀고 있습니다. :blush: 
 #
 ## Category  
 #
