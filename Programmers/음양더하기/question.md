@@ -39,3 +39,5 @@ signs가 [false,false,true] 이므로, 실제 수들의 값은 각각 -1, -2, 3�
 [출처](https://programmers.co.kr/learn/courses/30/lessons/76501)
 
 //이 문제는 쉽게 구현 가능한 문제였다!
+
+<img width="368" alt="스크린샷 2021-12-25 오전 1 00 04" src="https://user-images.githubusercontent.com/88166362/147363502-4477e482-03be-4d08-a8d4-3ae3746b0051.png">
