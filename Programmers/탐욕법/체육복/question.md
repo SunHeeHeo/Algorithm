@@ -28,3 +28,6 @@ n	lost	reserve	return
 ※ 공지 - 2021년 8월 30일 테스트케이스가 추가되었습니다.  
 
 [출처](https://programmers.co.kr/learn/courses/30/lessons/42862)
+
+<img width="568" alt="스크린샷 2021-12-28 오후 2 45 17" src="https://user-images.githubusercontent.com/88166362/147536700-d5660563-4d42-4377-9d45-68d87a264d4d.png">
+다시 풀어봐야 할 문제!(12.28)
