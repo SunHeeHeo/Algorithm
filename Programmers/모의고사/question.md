@@ -14,6 +14,7 @@
 입출력 예
 	return
 
+
 	
 
 |answers|return|
@@ -38,4 +39,4 @@
 
 난.. 런타임 에러로 떴다. 그 이유를 추측해 보면,
 답안이 계속 반복 된는데, 예시 처럼 답안을 5개로 한정 지어서 그런거 같다!
-
+<img width="467" alt="스크린샷 2021-12-27 오후 8 24 40" src="https://user-images.githubusercontent.com/88166362/147469128-af1ea77f-85cd-4ff8-8e6b-0d7680f1ab89.png">
