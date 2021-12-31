@@ -1,3 +1,5 @@
+/*소요시간 약 40분*/
+
 let numbers = [2, 1, 3, 4, 1];
 
 function solution(numbers) {
@@ -31,11 +33,4 @@ function solution(numbers) {
 }
 console.log(solution(numbers));
 
-// for (var i = 2; i < 10; i++) {
-//   console.log(i + "단 출력 시작");
-//   for (var j = 1; j < 10; j++) {
-//     console.log("j", j);
-//     console.log(i + " X " + j + " = " + i * j);
-//   }
-//   console.log(i + "단 출력 끝");
-// }
+//한번에 성공 했다 :)
