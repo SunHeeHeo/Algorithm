@@ -36,3 +36,7 @@ numbers의 모든 수는 0 이상 100 이하입니다.
 따라서 [2,5,7,9,12] 를 return 해야 합니다.
 
 [출처](https://programmers.co.kr/learn/courses/30/lessons/68644)
+
+한 번에 성공 :)  
+![스크린샷 2022-01-01 오전 12 25 56](https://user-images.githubusercontent.com/88166362/147830547-814cfca1-a1ff-4b42-a621-cca86626a563.png)
+
