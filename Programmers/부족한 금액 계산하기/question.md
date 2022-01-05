@@ -12,7 +12,7 @@
 
 ## 입출력 예
 
-price money count result
+price money count result  
 3 20 4 10
 
 ## 입출력 예 설명
