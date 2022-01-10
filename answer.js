@@ -24,5 +24,5 @@ function solution(n) {
 }
 
 /*haha need to think about the answer that i've found
-anyway it's almost done with leve 1 questions on programmers :)
+anyway I'm almost done with leve 1 questions on programmers :)
 */
